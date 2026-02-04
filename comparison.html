@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HCI Models – Comparative Analysis</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f7fb;
+      color: #111;
+    }
+
+    .match {
+      background-color: #d6f5d6; /* green */
+    }
+
+    .partial {
+      background-color: #fff3cd; /* yellow */
+    }
+
+    .nomatch {
+      background-color: #f8d7da; /* red */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Norman’s Model vs GOMS and KLM – ATM Withdrawal Example</h1>
+  <p>HCI Notes: Comparative Analysis (Detailed)</p>
+</header>
+
+<nav aria-label="Primary navigation">
+  <ul>
+    <li><a href="index.html">Introduction</a></li>
+    <li><a href="theories.html">Theories</a></li>
+    <li><a href="comparison.html" aria-current="page">Comparison</a></li>
+    <li><a href="learnings.html">My Learnings</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section>
+    <table>
+      <caption>Norman’s Model vs GOMS and KLM – ATM Withdrawal</caption>
+
+      <thead>
+        <tr>
+          <th>Norman’s Stage</th>
+          <th>ATM Example (User Perspective)</th>
+          <th>GOMS Interpretation (Task Structure)</th>
+          <th>KLM Interpretation (Low-level Actions)</th>
+          <th>Analysis (Model Alignment)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="match">
+          <td>Goal</td>
+          <td>User forms a clear goal: “I need Rs. 5000 cash for immediate use.”</td>
+          <td>GOAL: Withdraw cash.<br>This is the top-level objective defined before any action starts.</td>
+          <td>Not modeled. KLM assumes the goal is already fixed.</td>
+          <td>Direct Match – Norman’s Goal corresponds exactly to GOMS Goal.</td>
+        </tr>
+
+        <tr class="match">
+          <td>Plan / Intention</td>
+          <td>User decides: “I’ll use the ATM nearby instead of going inside the bank.”</td>
+          <td>METHOD: ATM withdrawal method.<br>Selection Rule: Choose ATM because it is faster and convenient.</td>
+          <td>Not modeled. KLM does not represent planning decisions.</td>
+          <td>Strong Match – Norman’s planning maps to GOMS Method and Selection Rule.</td>
+        </tr>
+
+        <tr class="partial">
+          <td>Specify</td>
+          <td>User mentally plans the steps: insert card → enter PIN → select withdrawal → enter amount.</td>
+          <td>Assumed to be already defined inside the chosen method. No explicit cognitive step is shown.</td>
+          <td>May involve a Mental operator [M], but only as preparation, not detailed reasoning.</td>
+          <td>Partial Match – Norman explicitly models thinking; GOMS and KLM largely abstract it.</td>
+        </tr>
+
+        <tr class="match">
+          <td>Execute</td>
+          <td>User physically inserts card, types PIN, presses screen buttons.</td>
+          <td>OPERATORS: Key presses, button selections, card insertion.</td>
+          <td>[M][P][K] sequence: [M] prepare → [P] point → [K] press.</td>
+          <td>Direct Match – All three models represent physical execution clearly.</td>
+        </tr>
+
+        <tr class="nomatch">
+          <td>Perceive</td>
+          <td>User sees screen message “Processing…” and hears ATM sounds.</td>
+          <td>Not modeled. Correct perception is assumed.</td>
+          <td>Not modeled. No perception stage exists.</td>
+          <td>Major Difference – Only Norman explicitly includes perception.</td>
+        </tr>
+
+        <tr class="nomatch">
+          <td>Interpret</td>
+          <td>User understands: “The ATM is checking my PIN and balance.”</td>
+          <td>Assumed perfect and automatic understanding.</td>
+          <td>Ignored completely.</td>
+          <td>Major Difference – Interpretation is central to Norman but absent in GOMS/KLM.</td>
+        </tr>
+
+        <tr class="nomatch">
+          <td>Evaluate</td>
+          <td>Cash is dispensed; user checks amount and confirms goal is achieved.</td>
+          <td>Task is assumed complete once operators finish successfully.</td>
+          <td>Task ends when last operator finishes; no evaluation.</td>
+          <td>Key Difference – Only Norman checks whether the goal was truly achieved.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <p>HCI Notes – Comparative Analysis</p>
+</footer>
+
+</body>
+</html>
