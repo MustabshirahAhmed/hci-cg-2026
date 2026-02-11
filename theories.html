@@ -2,19 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HCI Theories – Norman, GOMS, and KLM</title>
+  <title>Theories – Norman, GOMS & KLM</title>
 
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f5f7fb; color: #111; }
-    .note { background-color: #e7f3ff; }
-    .important { background-color: #fff3cd; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9fafc;
+      color: #111;
+    }
+
+    .highlight {
+      background-color: #fff3cd;
+    }
+
+    .ref-box {
+      background-color: #e7f3ff;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>HCI Theories: Norman, GOMS, and KLM</h1>
-  <p>Conceptual Foundations for Interaction Analysis</p>
+  <h1>Norman’s Model, GOMS Model & Keystroke-Level Model (KLM)</h1>
+  <p>Human–Computer Interaction – Detailed Theories Page</p>
 </header>
 
 <nav aria-label="Primary navigation">
@@ -30,112 +40,151 @@
 <main>
 
 <section>
-  <h2>1. Norman’s Action Cycle (1988)</h2>
-
+  <h2>1. Don Norman – Model of Interaction</h2>
   <p>
-    Don Norman proposed a psychological model explaining how users interact with systems.
-    It focuses on how people form goals, take actions, and evaluate results.
+    Don Norman is a cognitive scientist who studied how people think and behave when using interactive systems.
+    His model explains interaction as a cycle between the user and the system.
   </p>
 
-  <h3>Norman’s 7 Stages of Action</h3>
+  <p class="highlight">
+    Norman’s model is mainly used to explain:
+    why users get confused, why errors happen, and how design can reduce these problems.
+  </p>
+
+  <h3>The Seven Stages of Action</h3>
   <ol>
-    <li><strong>Forming the Goal</strong> – What the user wants to achieve.</li>
-    <li><strong>Forming the Intention</strong> – How the user plans to achieve it.</li>
-    <li><strong>Specifying the Action</strong> – Choosing specific steps.</li>
-    <li><strong>Executing the Action</strong> – Performing physical actions.</li>
-    <li><strong>Perceiving the System State</strong> – Seeing what happened.</li>
-    <li><strong>Interpreting the System State</strong> – Understanding what it means.</li>
-    <li><strong>Evaluating the Outcome</strong> – Checking if the goal was met.</li>
+    <li>Forming the goal</li>
+    <li>Forming the intention</li>
+    <li>Specifying the action</li>
+    <li>Executing the action</li>
+    <li>Perceiving the system state</li>
+    <li>Interpreting the system state</li>
+    <li>Evaluating the outcome</li>
   </ol>
 
-  <h3>The Gulfs of Interaction</h3>
+  <h3>Gulf of Execution</h3>
+  <p>
+    The Gulf of Execution is the gap between what the user wants to do and what actions the system allows or makes visible.
+  </p>
 
-  <div class="important">
-    <p><strong>Gulf of Execution:</strong> Gap between what the user wants to do and what the system allows them to do.</p>
-    <p><strong>Gulf of Evaluation:</strong> Gap between what the system shows and what the user understands.</p>
+  <p class="highlight">
+    Example:  
+    A user wants to turn Wi-Fi ON, but the icon is hidden in a confusing menu.
+    The goal is clear, but the user doesn’t know how to do it.
+  </p>
+
+  <h3>Gulf of Evaluation</h3>
+  <p>
+    The Gulf of Evaluation is the gap between what the system does and how well the user understands it.
+  </p>
+
+  <p class="highlight">
+    Example:  
+    The user clicks “Submit” on a form, but nothing changes on the screen.
+    The system gives no feedback, so the user doesn’t know if it worked.
+  </p>
+
+  <div class="ref-box">
+    <p><strong>Reference:</strong></p>
+    <p>
+      Dix et al., <em>Human–Computer Interaction</em>, 3rd ed., Pearson.  
+      Chapter 9, pp. 307–314 (Norman’s Model, Gulfs of Execution & Evaluation)
+    </p>
   </div>
-
-  <h4>Examples of Gulfs</h4>
-  <ul>
-    <li>ATM shows "Error 404" → user doesn’t know what it means → Gulf of Evaluation</li>
-    <li>User wants to cancel a payment but can’t find the cancel button → Gulf of Execution</li>
-    <li>Microwave has symbols instead of words → user guesses → Gulf of Evaluation</li>
-  </ul>
-
 </section>
 
 <section>
   <h2>2. GOMS Model (Goals, Operators, Methods, Selection Rules)</h2>
 
   <p>
-    GOMS is a task-analysis model. It describes how expert users perform tasks efficiently.
-    It breaks tasks into structured components.
+    The GOMS model was proposed by Card, Moran, and Newell.
+    It explains how an expert user performs a task after learning is complete.
   </p>
 
-  <h3>Components of GOMS</h3>
   <ul>
-    <li><strong>Goals</strong> – What the user wants to achieve.</li>
-    <li><strong>Operators</strong> – Basic actions (click, type, press).</li>
-    <li><strong>Methods</strong> – Step-by-step procedures to achieve goals.</li>
-    <li><strong>Selection Rules</strong> – Rules for choosing between methods.</li>
+    <li><strong>Goals:</strong> What the user wants to achieve</li>
+    <li><strong>Operators:</strong> Basic actions (click, type, move mouse)</li>
+    <li><strong>Methods:</strong> Step-by-step procedures to achieve a goal</li>
+    <li><strong>Selection Rules:</strong> Rules for choosing between methods</li>
   </ul>
 
-  <h4>ATM Example in GOMS</h4>
-  <ul>
-    <li><strong>Goal:</strong> Withdraw cash</li>
-    <li><strong>Method:</strong> Insert card → Enter PIN → Select Withdraw → Enter amount</li>
-    <li><strong>Operators:</strong> Key presses, button taps</li>
-    <li><strong>Selection Rule:</strong> If ATM available → use ATM instead of teller</li>
-  </ul>
-
-  <p class="note">
-    GOMS assumes the user already knows what to do. It does not model confusion or learning.
+  <p class="highlight">
+    Example:  
+    Goal: Withdraw cash  
+    Method: Use ATM  
+    Operators: Insert card, press keys  
+    Selection Rule: If ATM is nearby → use ATM
   </p>
+
+  <p>
+    GOMS assumes correct behavior. It does NOT model:
+    confusion, learning, feedback, or errors.
+  </p>
+
+  <div class="ref-box">
+    <p><strong>Reference:</strong></p>
+    <p>
+      Dix et al., <em>Human–Computer Interaction</em>, 3rd ed., Pearson.  
+      Chapter 9, pp. 318–323 (GOMS Model)
+    </p>
+  </div>
 </section>
 
 <section>
-  <h2>3. KLM – Keystroke Level Model</h2>
+  <h2>3. Keystroke-Level Model (KLM)</h2>
 
   <p>
-    KLM is a predictive model. It estimates how long an expert user will take to complete a task.
-    It focuses only on execution — not planning or understanding.
+    KLM is a simplified, quantitative version of GOMS.
+    It predicts how long a task will take for an expert user.
   </p>
 
   <h3>KLM Operators</h3>
   <ul>
     <li><strong>K</strong> – Keystroke or tap</li>
     <li><strong>P</strong> – Pointing to a target</li>
-    <li><strong>H</strong> – Homing (move hand to device)</li>
+    <li><strong>H</strong> – Homing (move hand between devices)</li>
     <li><strong>M</strong> – Mental preparation</li>
     <li><strong>R</strong> – System response time</li>
+    <li><strong>B</strong> – Mouse button press</li>
   </ul>
 
-  <h4>ATM Example (KLM)</h4>
-  <ul>
-    <li>[M] Decide to press Withdraw</li>
-    <li>[P] Move finger to button</li>
-    <li>[K] Press button</li>
-    <li>[R] Wait for screen update</li>
-  </ul>
-
-  <p class="note">
-    KLM assumes: no errors, no hesitation, expert user, and perfect memory.
+  <p class="highlight">
+    Example (ATM PIN entry):  
+    [M] think → [P] move finger → [K] press key
   </p>
+
+  <p>
+    KLM assumes:
+    expert users, no errors, and no need for feedback.
+  </p>
+
+  <div class="ref-box">
+    <p><strong>Reference:</strong></p>
+    <p>
+      Dix et al., <em>Human–Computer Interaction</em>, 3rd ed., Pearson.  
+      Chapter 9, pp. 323–327 (KLM Operators & Time Prediction)
+    </p>
+  </div>
 </section>
 
-<section>
-  <h2>Summary of Core Differences</h2>
+<section class="ref-box">
+  <h2>Overall Book Reference</h2>
+  <p>
+    Dix, A., Finlay, J., Abowd, G., & Beale, R. (2004).  
+    <em>Human–Computer Interaction</em>, 3rd Edition, Pearson.
+  </p>
   <ul>
-    <li>Norman explains <strong>thinking + feedback</strong></li>
-    <li>GOMS explains <strong>task structure</strong></li>
-    <li>KLM predicts <strong>execution time</strong></li>
+    <li>Norman’s Model → Chapter 9, pp. 307–314</li>
+    <li>GOMS Model → Chapter 9, pp. 318–323</li>
+    <li>KLM → Chapter 9, pp. 323–327</li>
+    <li>Model comparison → Chapter 12, pp. 392–400</li>
   </ul>
 </section>
 
 </main>
 
 <footer>
-  <p>HCI Notes – Norman, GOMS, and KLM</p>
+  <p>HCI Notes Website – Theories Page</p>
 </footer>
 
 </body>
